@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row" id="main-background">
+
+    <div class="col-md-10 main-content" id="main-bar">
+       <h4>Procedures</h4>
+    </div>
+
+
+    <div class="col-md-2" id="right-box">
+
+
+
+        <div class="col-md-12 box" id="right-box1"><h4>Calendar</h4> example1</div>
+
+
+        <div class="col-md-12 box2" id="right-box2"><h4>Nieuws</h4> example2</div>
+
+
+        <div class="col-md-12 box3" id="right-box3"><h4>Vakantie</h4> example3</div>
+
+
+        <div class="col-md-12 box4" id="right-box4"><h4>Verjaardag</h4> example4</div>
+
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+    //document.getElementById('show-bar').onclick = function () { alert('WAKACJE!'); };
+    $("#hide-bar").click(function ()
+    {
+        $("#main-bar").addClass("col-md-12");
+        $("#right-arrow").hide("slow");
+        $("#left-arrow").show("slow");
+        $("#right-box").hide("slow");
+
+
+    });
+    $("#show-bar").click(function () {
+        $("#main-bar").removeClass("col-md-12");
+        $("#left-arrow").hide("slow");
+        $("#right-arrow").show("slow");
+
+        $("#right-box").show("slow");
+
+
+
+    });
+
+    $("#nieuws-top-menu").click(function ()
+    {
+        $("#nieuws-sub-menu").show("slow");
+        $("#organisatie-sub-menu").hide("slow");
+        $("#veiligheid-sub-menu").hide("slow");
+        $("#medewerkers-sub-menu").hide("slow");
+        $("#formulieren-sub-menu").hide("slow");
+        $("#chat-sub-menu").hide("slow");
+    });
+    $("#organisatie-top-menu").click(function () {
+        $("#nieuws-sub-menu").hide("slow");
+        $("#organisatie-sub-menu").show("slow");
+        $("#veiligheid-sub-menu").hide("slow");
+        $("#medewerkers-sub-menu").hide("slow");
+        $("#formulieren-sub-menu").hide("slow");
+        $("#chat-sub-menu").hide("slow");
+    });
+    $("#veiligheid-top-menu").click(function () {
+        $("#nieuws-sub-menu").hide("slow");
+        $("#organisatie-sub-menu").hide("slow");
+        $("#veiligheid-sub-menu").show("slow");
+        $("#medewerkers-sub-menu").hide("slow");
+        $("#formulieren-sub-menu").hide("slow");
+        $("#chat-sub-menu").hide("slow");
+    });
+    $("#medewerkers-top-menu").click(function () {
+        $("#nieuws-sub-menu").hide("slow");
+        $("#organisatie-sub-menu").hide("slow");
+        $("#veiligheid-sub-menu").hide("slow");
+        $("#medewerkers-sub-menu").show("slow");
+        $("#formulieren-sub-menu").hide("slow");
+        $("#chat-sub-menu").hide("slow");
+    });
+    $("#formulieren-top-menu").click(function () {
+        $("#nieuws-sub-menu").hide("slow");
+        $("#organisatie-sub-menu").hide("slow");
+        $("#veiligheid-sub-menu").hide("slow");
+        $("#medewerkers-sub-menu").hide("slow");
+        $("#formulieren-sub-menu").show("slow");
+        $("#chat-sub-menu").hide("slow");
+    });
+    $("#chat-top-menu").click(function () {
+        $("#nieuws-sub-menu").hide("slow");
+        $("#organisatie-sub-menu").hide("slow");
+        $("#veiligheid-sub-menu").hide("slow");
+        $("#medewerkers-sub-menu").hide("slow");
+        $("#formulieren-sub-menu").hide("slow");
+        $("#chat-sub-menu").show("slow");
+
+    });
+
+    function updateTime()
+    {
+        var now = new Date();
+        var minutes = now.getMinutes();
+        if (minutes < 10) { minutes = "0" + minutes;}
+        var time = now.getHours() + ":" + minutes;
+        document.getElementById("Hour").innerHTML = time;
+        setTimeout(updateTime, 1000);
+
+    }
+    $(document).ready(function ()
+    {
+        updateTime();
+
+    });
+
+    </script>
+
+}
+

@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @{
+        var homepageUrl = Url.Action("Index", "Home", null, protocol: Request.Url.Scheme);
+     }
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="row" id="header">
+                <div class="col-lg-3" id="days"> 
+                    @DateTime.Now.ToString("dddd", new System.Globalization.CultureInfo("NL-NL"))     
+                    @DateTime.Now.ToString("dd-MM-yyyy")
+                </div>
+                <div class="col-lg-4" id="search">
+                    <input type="text" /> <a href="#"><i class="fa fa-search fa-1g" aria-hidden="true"></i> </a>
+                </div>
+                <div class="col-lg-1" id="Hour">
+                    @DateTime.Now.ToString("HH:mm")
+                </div>
+                <div class="col-lg-1" id="options">
+                    <a href="#"> <i class="fa fa-cog fa-1x" aria-hidden="true"></i></a>
+                    <a href="#"> <i class="fa fa-sign-out fa-1x" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-lg-3" id="name">
+                    <a href="#"> <img src="~/Content/img/patryk.png" /></a>
+                    <a href="#">Patryk Gorecki</a>
+                </div>
+            </div>
+           
+
+            
+        </div>
+        <div class="row" id="top-container">
+            <div class="container">
+                <div class="col-lg-3" id="logo">
+                    <a href="@homepageUrl"> <img src="~/Content/img/logoNewBlue.png" alt="logo" width="130" /> </a>
+                </div>
+                <div class="col-lg-9" id="top-menu">
+                    <nav class="navbar navbar-default">
+                        <ul class="nav navbar-nav menu">
+                            <li><a href="#" id="nieuws-top-menu"> Nieuws</a> </li>
+                            <li><a href="#" id="organisatie-top-menu">Organisatie</a> </li>
+                            <li><a href="#" id="veiligheid-top-menu">Veiligheid</a> </li>
+                            <li><a href="#" id="medewerkers-top-menu">Medewerkers</a> </li>
+                            <li><a href="#" id="formulieren-top-menu">Formulieren</a> </li>
+                            <li><a href="#" id="chat-top-menu">Chat</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "nieuws" ? "show-sub-menu" : "hidden-sub-menu")" id="nieuws-sub-menu" >
+                <div class="row">
+                    <div class="col-md-1" id="company">@Html.ActionLink("Company", "Company", "Nieuws") </div>
+                    <div class="col-md-1" id="hydepark">@Html.ActionLink("Hydepark", "Hydepark", "Nieuws")</div>
+                </div>
+            </div>
+            <div class="col-lg-12 sub-menu" id="organisatie-sub-menu" style="display:none">
+                <div class="row">
+                    <div class="col-md-1" id="productie">@Html.ActionLink("Productie", "Productie", "Organisatie")</div>
+                    <div class="col-md-1" id="expeditie">@Html.ActionLink("Expeditie", "Expeditie", "Organisatie")</div>
+                    <div class="col-md-1" id="aanmak"> @Html.ActionLink("Aanmak", "Aanmak", "Organisatie")</div> 
+                    <div class="col-md-1" id="HR">@Html.ActionLink("HR", "HR", "Organisatie")</div>
+                    <div class="col-md-1" id="administratie">@Html.ActionLink("Administratie", "Administratie", "Organisatie")</div>
+                </div>
+            </div>
+            <div class="col-lg-12 sub-menu" id="veiligheid-sub-menu" style="display:none" >
+                <div class="row">
+                    <div class="col-md-1" id="MSDS"> @Html.ActionLink("MSDS", "MSDS", "Veiligheid")</div>
+                    <div class="col-md-1" id="procedures">@Html.ActionLink("Procedures", "Procedures", "Veiligheid")</div>
+                </div>
+            </div>
+            <div class="col-lg-12 sub-menu" id="medewerkers-sub-menu" style="display:none">
+                <div class="row">
+                    <div class="col-md-1" id="productie"> @Html.ActionLink("Productie", "Productie", "Medewerkers")</div>
+                    <div class="col-md-1" id="expeditie">@Html.ActionLink("Expeditie", "Expeditie", "Medewerkers")</div>
+                    <div class="col-md-1" id="aanmak"> @Html.ActionLink("Aanmak", "Aanmak", "Medewerkers") </div>
+                    <div class="col-md-1" id="HR">@Html.ActionLink("HR", "HR", "Medewerkers")</div>
+                    <div class="col-md-1" id="administratie">@Html.ActionLink("Administratie", "Administratie", "Medewerkers")</div>
+                    <div class="col-md-1" id="fotogalerij">@Html.ActionLink("Fotogallerij", "Fotogallerij", "Medewerkers")</div>
+                </div>
+            </div>
+            <div class="col-lg-12 sub-menu" id="formulieren-sub-menu" style="display:none">
+                <div class="row">
+                    <div class="col-md-12" id="vakantie">@Html.ActionLink("Vakantie", "Vakantie", "Formulieren")</div>
+                </div>
+            </div>
+            <div class="col-lg-12 sub-menu" id="chat-sub-menu" style="display:none">
+                <div class="row">
+                    <div class="col-lg-12" id="chat">@Html.ActionLink("Chat", "Chat", "Chat")</div>
+                </div>
+            </div>
+        </div>                   
+    </div> 
+    <div class="container body-content">
+        
+        <div class="content">
+            <div class="row" id="breadcrumbs">
+                <div class="col-lg-10" id="ways">
+                @{
+                    if(Context.Request.RequestContext.RouteData.Values["Controller"].ToString().ToLower() != "home")
+                    {
+                     @Context.Request.RequestContext.RouteData.Values["Controller"]
+                    }
+                    if (Context.Request.RequestContext.RouteData.Values["Action"].ToString().ToLower() != "index")
+                    {
+                        @: > @Context.Request.RequestContext.RouteData.Values["Action"]
+                    }
+}
+                </div>
+                <div class="col-lg-2">
+                    <div id="right-arrow"> <a href="#" id="hide-bar"><i class="fa fa-chevron-right fa-1g" aria-hidden="true"></i></a></div>
+                    <div id="left-arrow" style="display:none"> <a href="#" id="show-bar"> <i class="fa fa-chevron-left fa-1g" aria-hidden="true"></i></a></div>
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+        
+            <footer>
+                <div class="col-lg-11">
+                    <p>&copy; @DateTime.Now.Year - Distrifill </p>
+                   
+                </div>
+                <div class="col-lg-1">
+                    <a href="#"> <img src="~/Content/img/flags.png" width="50"/> </a>
+                </div>
+            </footer>
+        </div>
+   
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/docs.min.js"></script>
+    <script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="~/Scripts/main.js"></script>
+    <script type="text/javascript" src="~/Scripts/jssor.slider.mini.js"></script>
+    <script type="text/javascript" src="~/Scripts/custom-box.js"></script>
+    
+</body>
+</html>

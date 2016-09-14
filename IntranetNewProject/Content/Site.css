@@ -1,0 +1,297 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;*/
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea 
+{
+    max-width: 280px;
+    max-height:25px;
+}
+.navbar-default
+{
+    background: none;
+    border: none;
+}
+#header
+{
+   color: white;
+   font-family: Tahoma;
+   font-size: 1.8em;
+   text-align:center;
+   text-transform: capitalize;
+
+}
+#logo
+{
+    width: 130px;
+    float:left;
+    text-align:center;
+    padding-top:10px;
+    padding-left:15px;
+}
+#name
+{
+    text-align:left;
+    float:left;
+}
+#name a
+{
+    color: white;
+    text-decoration:none;
+}
+#name a:hover
+{
+    text-decoration:none;
+    
+}
+#options
+{
+    text-align: center;
+}
+#search
+{
+   text-align:center;
+   padding-top:2px;
+
+}
+#options a, #search a
+{
+    color:white;
+}
+#top-menu
+{
+    float:right;
+    width: 88%;
+    color:#6E7783;
+}
+#top-menu a:hover, a:active
+{
+    color: #2ea3f3;
+}
+
+.menu
+{
+    width:100%;
+
+}
+.menu li
+{
+    min-width: 15%;
+    text-align: center;
+    padding-top:15px;
+    
+}
+.menu a
+{
+    font-family: Tahoma;
+    font-size: 1.5em;
+    color: #2ea3f3;
+}
+
+.sub-menu 
+{
+    background: #2ea3f3;
+    height: 20px;
+    font-family: Tahoma;
+    font-size: 1em;
+    color: white;
+    text-align:center;
+    
+}
+.sub-menu a
+{
+    color:white;
+    text-decoration:none;
+}
+.sub-menu a:hover, a:active
+{
+    text-decoration:none;
+  
+}
+.content
+{
+    /*background: #e3ebed;*/
+    margin-top: 85px;
+   
+}
+.main-content
+{
+    text-align: center;
+   /*background-color: #e3ebed;*/
+   box-shadow: 5px 5px 10px grey;
+    
+}
+#breadcrumbs
+{
+    margin-bottom: 5px;
+}
+#breadcrumbs a
+{
+    color:#6E7783;
+    font-family:Tahoma;
+    margin-left: 10px;
+    text-decoration:none;
+}
+#breadcrumbs a:hover
+{
+    text-decoration:none;
+}
+footer
+{
+    background: #2ea3f3;
+    height: 20px;
+    font-family:Tahoma;
+    font-size:1em;
+    color:white;
+    margin-top:10px;
+    padding-left:10px;
+}
+#top-container
+{
+    /*position: fixed;*/
+    z-index:5;
+    background:white;
+   
+    
+}
+.container a:active
+{
+  
+     color: #2ea3f3;
+    
+}
+.box, .box2, .box3, .box4
+{
+    padding:0.5px;
+    border-radius:10px;
+    background-color:white;
+    box-shadow: 5px 5px 10px grey;
+    
+
+}
+h4 
+{
+    padding: 5px;
+    margin: 0px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+99;Grey+3D+%231 */
+background: #cedce7; /* Old browsers */
+background: -moz-linear-gradient(top, #cedce7 0%, #596a72 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #cedce7 0%,#596a72 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #cedce7 0%,#596a72 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+}
+.navbar-inverse 
+{
+    border-color: #ffffff;
+}
+#company
+{
+    text-align:right;
+    margin-left: 160px;
+}
+#hydepark
+{
+    text-align:center;
+}
+#productie 
+{
+    text-align:right;
+    margin-left: 165px;
+}
+#expeditie 
+{
+    text-align:right;
+}
+#aanmak
+{
+    text-align:right;
+}
+#HR 
+{
+    text-align:center;
+}
+#administratie
+{
+    text-align:left;
+
+}
+#MSDS
+{
+    text-align:right;
+    margin-left: 140px;
+}
+#procedures
+{
+    text-align:center;
+}
+#fotogalerij
+{
+    text-align:left;
+
+}
+#vakantie
+{
+    text-align:left;
+     margin-left: 220px;
+}
+#chat
+{
+    text-align:left;
+    margin-left: 220px;
+}
+#right-box
+{
+    padding-left: 10px;
+    padding-right: 15px;
+   
+}
+#right-box1, #right-box2, #right-box3, #right-box4
+{
+    margin-bottom:50px;
+    margin-top:40px;
+}
+#right-arrow
+{
+    text-align:right;
+    margin-right:5px;
+    margin-top:5px;
+}
+
+#left-arrow
+{
+    text-align:right;
+    margin-right:5px;
+     margin-top:5px;
+}
+#ways
+{
+    margin-top:5px;
+    padding-left: 20px;
+}
+.show-sub-menu
+{
+    display:inline-block;
+}
+.hidden-sub-menu
+{
+    display:none;
+}

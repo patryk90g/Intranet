@@ -136,6 +136,7 @@ textarea
     text-align: center;
    /*background-color: #e3ebed;*/
    box-shadow: 5px 5px 10px grey;
+   overflow: hidden;
     
 }
 #breadcrumbs
@@ -295,3 +296,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 {
     display:none;
 }
+

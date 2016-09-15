@@ -2,13 +2,15 @@
     $(document).ready(function ()
     {
         var cookie = document.cookie;
-        if (cookie.includes("Bar-status=hide"))
+        console.log("cokolwiek");
+        if (cookie.includes("Bar-status"))
         {
             console.log("to działa")
-            $("#right-arrow").hide();
-            $("#left-arrow").show();
-            $("#right-box").hide();
-            $("#main-bar").addClass("col-lg-12");
+            $("#right-arrow").show();
+            $("#left-arrow").hide();
+            $("#right-box").show();
+            $("#main-bar").removeClass("col-lg-12");
+            $("#main-bar").addClass("col-lg-10");
         };
         //console.log("napis");
     });
@@ -16,11 +18,13 @@
 $("#hide-bar").click(function ()
 {
         
-    $("#right-arrow").hide("slow");
-    $("#left-arrow").show("slow");
-    $("#right-box").hide("slow");
+    $("#right-arrow").hide();
+    $("#left-arrow").show();
+    $("#right-box").hide();
+    //setTimeout(function () { $("#main-bar").addClass("col-lg-12"); }, 500);
     $("#main-bar").addClass("col-lg-12");
-    document.cookie = "Bar-status=hide";
+    $("#right-box").removeClass("hidden-sub-menu");
+    document.cookie = "Bar-status=show; expires=Thu, 01 Jan 1970 00:00:00 UTC;  path=/";
     //console.log(document.cookie);
 });
 $("#show-bar").click(function () {
@@ -29,9 +33,12 @@ $("#show-bar").click(function () {
     $("#right-arrow").show("slow");
 
     $("#right-box").show("slow");
+    $("#main-bar").addClass("col-lg-10");
     $("#main-bar").removeClass("col-lg-12");
+    $("#right-box").removeClass("hidden-sub-menu");
+    document.cookie = "Bar-status=show ; path=/";
        
-    document.cookie = "Bar-status-hide=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+   
         
 
 });

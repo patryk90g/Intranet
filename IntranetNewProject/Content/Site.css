@@ -44,37 +44,10 @@ textarea
     float:left;
     text-align:center;
     padding-top:10px;
-    padding-left:15px;
+   
 }
-#name
-{
-    text-align:left;
-    float:left;
-}
-#name a
-{
-    color: white;
-    text-decoration:none;
-}
-#name a:hover
-{
-    text-decoration:none;
-    
-}
-#options
-{
-    text-align: center;
-}
-#search
-{
-   text-align:center;
-   padding-top:2px;
 
-}
-#options a, #search a
-{
-    color:white;
-}
+
 #top-menu
 {
     float:right;
@@ -112,7 +85,7 @@ textarea
     font-family: Tahoma;
     font-size: 1em;
     color: white;
-    text-align:center;
+     display: flex;
     
 }
 .sub-menu a
@@ -204,60 +177,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 {
     border-color: #ffffff;
 }
-#company
+#nieuws-sub-menu
 {
-    text-align:right;
-    margin-left: 160px;
+  
+    padding-left:21.5%;
 }
-#hydepark
+#organisatie-sub-menu 
 {
-    text-align:center;
+     padding-left:21.5%;
 }
-#productie 
+#veiligheid-sub-menu
 {
-    text-align:right;
-    margin-left: 165px;
+    padding-left: 21.5%;
 }
-#expeditie 
+#medewerkers-sub-menu
 {
-    text-align:right;
+     padding-left:21.5%;
 }
-#aanmak
+#formulieren-sub-menu
 {
-    text-align:right;
+     padding-left: 21.5%;
 }
-#HR 
+#chat-sub-menu
 {
-    text-align:center;
-}
-#administratie
-{
-    text-align:left;
-
-}
-#MSDS
-{
-    text-align:right;
-    margin-left: 140px;
-}
-#procedures
-{
-    text-align:center;
-}
-#fotogalerij
-{
-    text-align:left;
-
-}
-#vakantie
-{
-    text-align:left;
-     margin-left: 220px;
-}
-#chat
-{
-    text-align:left;
-    margin-left: 220px;
+    padding-left: 290px;
 }
 #right-box
 {
@@ -296,4 +239,54 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 {
     display:none;
 }
+#margin-menu
+{
+     padding-left:9%;
+     padding-right:10%;
+      display: flex;
+}
+#top-margin-tools
+{
+     
+     width:100%;
+}
+#days
+{
+    width:25%;
+}
+#Hour
+{
+    width:10%;
+}
+#name
+{
+    text-align:left;
+    float:left;
+    width: 20%;
+}
+#name a
+{
+    color: white;
+    text-decoration:none;
+}
+#name a:hover
+{
+    text-decoration:none;
+    
+}
+#options
+{
+    text-align: center;
+    width:10%;
+}
+#search
+{
+   text-align:center;
+   padding-top:2px;
+   width:25%;
 
+}
+#options a, #search a
+{
+    color:white;
+}

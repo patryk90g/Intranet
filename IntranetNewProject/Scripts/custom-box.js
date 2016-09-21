@@ -23,6 +23,7 @@ $("#hide-bar").click(function ()
     $("#right-box").hide();
     //setTimeout(function () { $("#main-bar").addClass("col-lg-12"); }, 500);
     $("#main-bar").addClass("col-lg-12");
+    $("#main-bar").removeClass("col-lg-10");
     $("#right-box").removeClass("hidden-sub-menu");
     document.cookie = "Bar-status=show; expires=Thu, 01 Jan 1970 00:00:00 UTC;  path=/";
     //console.log(document.cookie);
@@ -31,7 +32,6 @@ $("#show-bar").click(function () {
         
     $("#left-arrow").hide("slow");
     $("#right-arrow").show("slow");
-
     $("#right-box").show("slow");
     $("#main-bar").addClass("col-lg-10");
     $("#main-bar").removeClass("col-lg-12");

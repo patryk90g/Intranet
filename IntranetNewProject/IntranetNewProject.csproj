@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CalendarBoxController.cs" />
     <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\FormulierenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -193,7 +194,6 @@
     <Content Include="Content\img\a21.png" />
     <Content Include="Content\img\b05.png" />
     <Content Include="Content\img\b21.png" />
-    <Content Include="Content\img\Beztytulu.png" />
     <Content Include="Content\img\flags.png" />
     <Content Include="Content\img\loading.gif" />
     <Content Include="Content\img\logoNewBlue.png" />
@@ -279,6 +279,8 @@
     <Content Include="Views\Medewerkers\Fotogallerij.cshtml" />
     <Content Include="Views\Formulieren\Vakantie.cshtml" />
     <Content Include="Views\Chat\Chat.cshtml" />
+    <Content Include="Views\CalendarBox.cshtml" />
+    <Content Include="Views\CalendarBox\CalendarBox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

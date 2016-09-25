@@ -40,8 +40,7 @@ textarea
 }
 #logo
 {
-    width: 130px;
-    float:left;
+    width: 20%;
     text-align:center;
     padding-top:10px;
    
@@ -51,7 +50,7 @@ textarea
 #top-menu
 {
     float:right;
-    width: 88%;
+    width: 80%;
     color:#6E7783;
 }
 #top-menu a:hover, a:active
@@ -100,21 +99,20 @@ textarea
 }
 .content
 {
-    /*background: #e3ebed;*/
-    margin-top: 85px;
+   
+    margin-top: 100px;
    
 }
 .main-content
 {
     text-align: center;
-   /*background-color: #e3ebed;*/
    box-shadow: 5px 5px 10px grey;
    overflow: hidden;
     
 }
 #breadcrumbs
 {
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 #breadcrumbs a
 {
@@ -130,11 +128,10 @@ textarea
 footer
 {
     background: #2ea3f3;
-    height: 20px;
+    height: 25px;
     font-family:Tahoma;
     font-size:1em;
     color:white;
-    margin-top:10px;
     padding-left:10px;
 }
 #top-container
@@ -180,27 +177,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 #nieuws-sub-menu
 {
   
-    padding-left:21.5%;
+    padding-left:24%;
 }
 #organisatie-sub-menu 
 {
-     padding-left:21.5%;
+     padding-left:24%;
 }
 #veiligheid-sub-menu
 {
-    padding-left: 21.5%;
+    padding-left:23%;
 }
 #medewerkers-sub-menu
 {
-     padding-left:21.5%;
+     padding-left:24%;
 }
 #formulieren-sub-menu
 {
-     padding-left: 21.5%;
+     padding-left: 25%;
+     text-align: left;
 }
 #chat-sub-menu
 {
-    padding-left: 290px;
+    padding-left: 25%;
+    text-align: left;
+   
 }
 #right-box
 {
@@ -208,42 +208,52 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
     padding-right: 15px;
    
 }
-#right-box1, #right-box2, #right-box3, #right-box4
+ #right-box2, #right-box3, #right-box4
 {
     margin-bottom:50px;
     margin-top:40px;
+    text-decoration:none;
 }
+#right-box1
+ {
+     margin-bottom:50px;
+     text-decoration:none;
+ }
+
 #right-arrow
 {
     text-align:right;
     margin-right:5px;
-    margin-top:5px;
+    padding-top:5px;
 }
 
 #left-arrow
 {
     text-align:right;
     margin-right:5px;
-     margin-top:5px;
+     padding-top:5px;
 }
 #ways
 {
-    margin-top:5px;
+    padding-top:5px;
     padding-left: 20px;
 }
 .show-sub-menu
 {
     display:inline-block;
+  
 }
 .hidden-sub-menu
 {
     display:none;
+   
 }
 #margin-menu
 {
      padding-left:9%;
      padding-right:10%;
       display: flex;
+      width:100%;
 }
 #top-margin-tools
 {
@@ -252,7 +262,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 }
 #days
 {
-    width:25%;
+    width:30%;
 }
 #Hour
 {
@@ -283,10 +293,62 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', end
 {
    text-align:center;
    padding-top:2px;
-   width:25%;
+   width:30%;
 
 }
 #options a, #search a
 {
     color:white;
+}
+#nieuws-top-menu
+{
+    width:10%;
+}
+#organisatie-top-menu
+{
+    width:10%;
+}
+#veiligheid-top-menu
+{
+    width:10%;
+}
+#medewerkers-top-menu
+{
+    width:10%;
+}
+#formulieren-top-menu
+{
+    width:10%;
+}
+#chat-top-menu
+{
+    width:10%;
+}
+.body-content
+{
+    background-color:#F7F7F7;
+    padding-bottom:15px;
+}
+.options-submenu
+{
+    height:20px;
+    text-align: center;
+}
+.navbar-inverse {
+  background-color: #2ea3f3;
+  /*border-color: #080808;*/
+}
+@media (min-width: 1200px){
+.container {
+    max-width: 1270px;
+}}
+#main-background
+{
+    min-height:400px;
+}
+.container
+{
+   position: relative;
+    width: 100%;
+    overflow: hidden;
 }

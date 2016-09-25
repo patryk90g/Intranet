@@ -324,7 +324,7 @@ select,
 textarea {
   font-family: inherit;
   font-size: inherit;
-  line-height: none;
+  line-height: inherit;
 }
 
 button,
@@ -756,21 +756,11 @@ pre code {
   overflow-y: scroll;
 }
 
-/*.container {
+.container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}*/
-
-.container:before,
-.container:after {
-  display: table;
-  content: " ";
-}
-
-.container:after {
-  clear: both;
 }
 
 .container:before,
@@ -783,10 +773,20 @@ pre code {
   clear: both;
 }
 
-/*.row {
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.row {
   margin-right: -15px;
   margin-left: -15px;
-}*/
+}
 
 .row:before,
 .row:after {
@@ -858,8 +858,8 @@ pre code {
 .col-lg-12 {
   position: relative;
   min-height: 1px;
-  /*padding-right: 15px;
-  padding-left: 15px;*/
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .col-xs-1,
@@ -1243,7 +1243,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 100%;
+    max-width: 1170px;
   }
   .col-lg-1,
   .col-lg-2,
@@ -4026,7 +4026,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   z-index: 1000;
   min-height: 50px;
-  /*margin-bottom: 20px;*/
+  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 
@@ -4501,8 +4501,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #2ea3f3;
-  /*border-color: #080808;*/
+  background-color: #222222;
+  border-color: #080808;
 }
 
 .navbar-inverse .navbar-brand {
@@ -4525,7 +4525,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #2ea3f3;
+  color: #ffffff;
   background-color: transparent;
 }
 

@@ -20,166 +20,153 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="col-lg-12" id="top-margin-tools">
-                <div class="row" id="header">
-                    <div class="col-lg-3" id="days">
-                        @DateTime.Now.ToString("dddd", new System.Globalization.CultureInfo("NL-NL"))
-                        @DateTime.Now.ToString("dd-MM-yyyy")
-                    </div>
-                    <div class="col-lg-4" id="search">
-                        <input type="text" /> <a href="#"><i class="fa fa-search fa-1g" aria-hidden="true"></i> </a>
-                    </div>
-                    <div class="col-lg-1" id="Hour">
-                        @DateTime.Now.ToString("HH:mm")
-                    </div>
-                    <div class="col-lg-1" id="options">
-                        <a href="#"> <i class="fa fa-cog fa-1x" aria-hidden="true"></i></a>
-                        <a href="#"> <i class="fa fa-sign-out fa-1x" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="col-lg-3" id="name">
-                        <a href="#"> <img src="~/Content/img/patryk.png" /></a>
-                        <a href="#">Patryk Gorecki</a>
-                    </div>
+            <div class="row" id="header">
+                <div class="col-lg-3" id="days">
+                    @DateTime.Now.ToString("dddd", new System.Globalization.CultureInfo("NL-NL"))
+                    @DateTime.Now.ToString("dd-MM-yyyy")
+                </div>
+                <div class="col-lg-4" id="search">
+                    <input type="text" /> <a href="#"><i class="fa fa-search fa-1g" aria-hidden="true"></i> </a>
+                </div>
+                <div class="col-lg-1" id="Hour">
+                    @DateTime.Now.ToString("HH:mm")
+                </div>
+                <div class="col-lg-1" id="options">
+                    <a href="#"> <i class="fa fa-cog fa-1x" aria-hidden="true"></i></a>
+                    <a href="#"> <i class="fa fa-sign-out fa-1x" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-lg-3" id="name">
+                    <a href="#"> <img src="~/Content/img/patryk.png" /></a>
+                    <a href="#">Patryk Gorecki</a>
                 </div>
             </div>
-           
 
-            
+
+
         </div>
         <div class="row" id="top-container">
             <div class="container">
-                <div class="col-lg-12" id="margin-menu">
-                    <div class="col-lg-3" id="logo">
-                        <a href="@homepageUrl"> <img src="~/Content/img/logoNewBlue.png" alt="logo" width="130" /> </a>
-                    </div>
-                    <div class="col-lg-9" id="top-menu">
-                        <nav class="navbar navbar-default">
-                            <ul class="nav navbar-nav menu">
-                                <li><a href="#" id="nieuws-top-menu"> Nieuws</a> </li>
-                                <li><a href="#" id="organisatie-top-menu">Organisatie</a> </li>
-                                <li><a href="#" id="veiligheid-top-menu">Veiligheid</a> </li>
-                                <li><a href="#" id="medewerkers-top-menu">Medewerkers</a> </li>
-                                <li><a href="#" id="formulieren-top-menu">Formulieren</a> </li>
-                                <li><a href="#" id="chat-top-menu">Chat</a> </li>
-                            </ul>
-                        </nav>
-                    </div>
+                <div class="col-lg-3" id="logo">
+                    <a href="@homepageUrl"> <img src="~/Content/img/logoNewBlue.png" alt="logo" width="130" /> </a>
+                </div>
+                <div class="col-lg-9" id="top-menu">
+                    <nav class="navbar navbar-default">
+                        <ul class="nav navbar-nav menu">
+                            <li><a href="#" id="nieuws-top-menu"> Nieuws</a> </li>
+                            <li><a href="#" id="organisatie-top-menu">Organisatie</a> </li>
+                            <li><a href="#" id="veiligheid-top-menu">Veiligheid</a> </li>
+                            <li><a href="#" id="medewerkers-top-menu">Medewerkers</a> </li>
+                            <li><a href="#" id="formulieren-top-menu">Formulieren</a> </li>
+                            <li><a href="#" id="chat-top-menu">Chat</a> </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <div class="clearfix"></div>
-            <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "nieuws" ? "show-sub-menu" : "hidden-sub-menu")" id="nieuws-sub-menu" >
-                <div class="row">
-                    <div class="col-md-1" >@Html.ActionLink("Company", "Company", "Nieuws") </div>
-                    <div class="col-md-1" >@Html.ActionLink("Hydepark", "Hydepark", "Nieuws")</div>
+            <div class="container">
+                <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "nieuws" ? "show-sub-menu" : "hidden-sub-menu")" id="nieuws-sub-menu">
+                    <div class="row">
+                        <div class="col-md-1" id="company">@Html.ActionLink("Company", "Company", "Nieuws") </div>
+                        <div class="col-md-1" id="hydepark">@Html.ActionLink("Hydepark", "Hydepark", "Nieuws")</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12 sub-menu  @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "organisatie" ? "show-sub-menu" : "hidden-sub-menu")" id="organisatie-sub-menu">
-                <div class="row">
-                    <div class="col-ld-4"></div>
-                    <div class="col-md-1" id="productie">@Html.ActionLink("Productie", "Productie", "Organisatie")</div>
-                    <div class="col-md-1" id="expeditie">@Html.ActionLink("Expeditie", "Expeditie", "Organisatie")</div>
-                    <div class="col-md-1" id="aanmak"> @Html.ActionLink("Aanmak", "Aanmak", "Organisatie")</div> 
-                    <div class="col-md-1" id="HR">@Html.ActionLink("HR", "HR", "Organisatie")</div>
-                    <div class="col-md-1" id="administratie">@Html.ActionLink("Administratie", "Administratie", "Organisatie")</div>
-                    <div class="col-ld-3"></div>
+                <div class="col-lg-12 sub-menu  @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "organisatie" ? "show-sub-menu" : "hidden-sub-menu")" id="organisatie-sub-menu">
+                    <div class="row">
+                        <div class="col-md-1" id="productie">@Html.ActionLink("Productie", "Productie", "Organisatie")</div>
+                        <div class="col-md-1" id="expeditie">@Html.ActionLink("Expeditie", "Expeditie", "Organisatie")</div>
+                        <div class="col-md-1" id="aanmak"> @Html.ActionLink("Aanmak", "Aanmak", "Organisatie")</div>
+                        <div class="col-md-1" id="HR">@Html.ActionLink("HR", "HR", "Organisatie")</div>
+                        <div class="col-md-1" id="administratie">@Html.ActionLink("Administratie", "Administratie", "Organisatie")</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "veiligheid" ? "show-sub-menu" : "hidden-sub-menu")" id="veiligheid-sub-menu" >
-                <div class="row">
-                    <div class="col-ld-4"></div>
-                    <div class="col-md-1" id="MSDS"> @Html.ActionLink("MSDS", "MSDS", "Veiligheid")</div>
-                    <div class="col-md-1" id="procedures">@Html.ActionLink("Procedures", "Procedures", "Veiligheid")</div>
-                    <div class="col-ld-6"></div>
+                <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "veiligheid" ? "show-sub-menu" : "hidden-sub-menu")" id="veiligheid-sub-menu">
+                    <div class="row">
+                        <div class="col-md-1" id="MSDS"> @Html.ActionLink("MSDS", "MSDS", "Veiligheid")</div>
+                        <div class="col-md-1" id="procedures">@Html.ActionLink("Procedures", "Procedures", "Veiligheid")</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "medewerkers" ? "show-sub-menu" : "hidden-sub-menu")" id="medewerkers-sub-menu">
-                <div class="row">
-                    <div class="col-ld-4"></div>
-                    <div class="col-md-1" id="productie"> @Html.ActionLink("Productie", "Productie", "Medewerkers")</div>
-                    <div class="col-md-1" id="expeditie">@Html.ActionLink("Expeditie", "Expeditie", "Medewerkers")</div>
-                    <div class="col-md-1" id="aanmak"> @Html.ActionLink("Aanmak", "Aanmak", "Medewerkers") </div>
-                    <div class="col-md-1" id="HR">@Html.ActionLink("HR", "HR", "Medewerkers")</div>
-                    <div class="col-md-1" id="administratie">@Html.ActionLink("Administratie", "Administratie", "Medewerkers")</div>
-                    <div class="col-md-1" id="fotogalerij">@Html.ActionLink("Fotogallerij", "Fotogallerij", "Medewerkers")</div>
-                    <div class="col-ld-2"></div>
+                <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "medewerkers" ? "show-sub-menu" : "hidden-sub-menu")" id="medewerkers-sub-menu">
+                    <div class="row">
+                        <div class="col-md-1" id="productie"> @Html.ActionLink("Productie", "Productie", "Medewerkers")</div>
+                        <div class="col-md-1" id="expeditie">@Html.ActionLink("Expeditie", "Expeditie", "Medewerkers")</div>
+                        <div class="col-md-1" id="aanmak"> @Html.ActionLink("Aanmak", "Aanmak", "Medewerkers") </div>
+                        <div class="col-md-1" id="HR">@Html.ActionLink("HR", "HR", "Medewerkers")</div>
+                        <div class="col-md-1" id="administratie">@Html.ActionLink("Administratie", "Administratie", "Medewerkers")</div>
+                        <div class="col-md-1" id="fotogalerij">@Html.ActionLink("Fotogallerij", "Fotogallerij", "Medewerkers")</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "formulieren" ? "show-sub-menu" : "hidden-sub-menu")" id="formulieren-sub-menu">
-                <div class="row">
-                    <div class="col-md-12" id="vakantie">@Html.ActionLink("Vakantie", "Vakantie", "Formulieren")</div>
+                <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "formulieren" ? "show-sub-menu" : "hidden-sub-menu")" id="formulieren-sub-menu">
+                    <div class="row">
+                        <div class="col-md-12" id="vakantie">@Html.ActionLink("Vakantie", "Vakantie", "Formulieren")</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "chat" ? "show-sub-menu" : "hidden-sub-menu")" id="chat-sub-menu">
-                <div class="row">
-                    <div class="col-lg-12" id="chat">@Html.ActionLink("Chat", "Chat", "Chat")</div>
-                </div>
-            </div>
-        </div>                   
-    </div> 
-    <div class="container body-content">
-        
-        <div class="content">
-            
-                <div class="row" id="breadcrumbs">
-    <div class="col-lg-8" id="ways">
-        @{
-            if (Context.Request.RequestContext.RouteData.Values["Controller"].ToString().ToLower() != "home")
-            {
-                @Context.Request.RequestContext.RouteData.Values["Controller"]
-            }
-            if (Context.Request.RequestContext.RouteData.Values["Action"].ToString().ToLower() != "index")
-            {
-                @: > @Context.Request.RequestContext.RouteData.Values["Action"]
-
-
-                }
-            }
-                </div>
-
-                    <div class="col-lg-4">
-                        <div id="right-arrow" style="display:none"> <a href="#" id="hide-bar"><i class="fa fa-chevron-right fa-1g" aria-hidden="true"></i></a></div>
-                        <div id="left-arrow"> <a href="#" id="show-bar"> <i class="fa fa-chevron-left fa-1g" aria-hidden="true"></i></a></div>
+                <div class="col-lg-12 sub-menu @(ViewContext.RouteData.Values["Controller"].ToString().ToLower() == "chat" ? "show-sub-menu" : "hidden-sub-menu")" id="chat-sub-menu">
+                    <div class="row">
+                        <div class="col-lg-12" id="chat">@Html.ActionLink("Chat", "Chat", "Chat")</div>
                     </div>
                 </div>
             </div>
-           
-            <div class="row" id="main-background">
-                <div class="col-lg-12 main-content" id="main-bar">
-                    @RenderBody()
+        </div>
+    </div> 
+    <div class="container body-content">
+
+        <div class="content">
+
+            <div class="row" id="breadcrumbs">
+                <div class="col-lg-8" id="ways">
+                    @{
+                        if (Context.Request.RequestContext.RouteData.Values["Controller"].ToString().ToLower() != "home")
+                        {
+                            @Context.Request.RequestContext.RouteData.Values["Controller"]
+                        }
+                        if (Context.Request.RequestContext.RouteData.Values["Action"].ToString().ToLower() != "index")
+                        {
+                            @: > @Context.Request.RequestContext.RouteData.Values["Action"]
+                        }
+                    }
                 </div>
 
-
-                <div class="col-lg-2 hidden-sub-menu" id="right-box">
-
-
-
-                    <div class="col-md-12 box" id="right-box1"><h4>Calendar</h4> example1</div>
-
-
-                    <div class="col-md-12 box2" id="right-box2"><h4>Nieuws</h4> example2</div>
-
-
-                    <div class="col-md-12 box3" id="right-box3"><h4>Vakantie</h4> example3</div>
-
-
-                    <div class="col-md-12 box4" id="right-box4"><h4>Verjaardag</h4> example4</div>
-
+                <div class="col-lg-4">
+                    <div id="right-arrow" style="display:none"> <a href="#" id="hide-bar"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></div>
+                    <div id="left-arrow"> <a href="#" id="show-bar"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a></div>
                 </div>
             </div>
-       </div>
-        
-            <footer>
-                <div class="col-lg-11">
-                    <p>&copy; @DateTime.Now.Year - Distrifill </p>
-                   
-                </div>
-                <div class="col-lg-1">
-                    <a href="#"> <img src="~/Content/img/flags.png" width="50"/> </a>
-                </div>
-            </footer>
-        @*</div>*@
-   
+        </div>
+
+        <div class="row" id="main-background">
+            <div class="col-lg-12 main-content" id="main-bar">
+                @RenderBody()
+            </div>
+
+
+            <div class="col-lg-2 hidden-sub-menu" id="right-box">
+
+
+
+                  <div class="col-md-12 box" id="right-box1">@Html.ActionLink("CalendarBox", "CalendarBox", "CalendarBox")</div>
+
+
+                <a href="#"><div class="col-md-12 box2" id="right-box2"><h4>Nieuws</h4> example2</div></a>
+
+
+                <a href="#"> <div class="col-md-12 box3" id="right-box3"><h4>Vakantie</h4> example3</div></a>
+
+
+                <a href="#"> <div class="col-md-12 box4" id="right-box4"> <h4>Verjaardag</h4> example4</div></a>
+
+            </div>
+
+        </div>
+    </div>
+        <footer>
+            <div class="container">
+            <div class="col-lg-11"> <p>&copy; @DateTime.Now.Year - Distrifill </p></div>
+    <div class="col-lg-1">  <a href="#"> <img src="~/Content/img/flags.png" width="50" style="vertical-align:top; padding:5px" /> </a></div>
+            </div>
+    </footer>
     
+
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
@@ -189,6 +176,6 @@
     <script type="text/javascript" src="~/Scripts/main.js"></script>
     <script type="text/javascript" src="~/Scripts/jssor.slider.mini.js"></script>
     <script type="text/javascript" src="~/Scripts/custom-box.js"></script>
-    
+
 </body>
 </html>

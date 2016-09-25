@@ -30,9 +30,9 @@ $("#hide-bar").click(function ()
 });
 $("#show-bar").click(function () {
         
-    $("#left-arrow").hide("slow");
-    $("#right-arrow").show("slow");
-    $("#right-box").show("slow");
+    $("#left-arrow").hide();
+    $("#right-arrow").show();
+    $("#right-box").show();
     $("#main-bar").addClass("col-lg-10");
     $("#main-bar").removeClass("col-lg-12");
     $("#right-box").removeClass("hidden-sub-menu");
@@ -45,52 +45,52 @@ $("#show-bar").click(function () {
 
 $("#nieuws-top-menu").click(function ()
 {
-    $("#nieuws-sub-menu").show("slow");
-    $("#organisatie-sub-menu").hide("slow");
-    $("#veiligheid-sub-menu").hide("slow");
-    $("#medewerkers-sub-menu").hide("slow");
-    $("#formulieren-sub-menu").hide("slow");
-    $("#chat-sub-menu").hide("slow");
+    $("#nieuws-sub-menu").show();
+    $("#organisatie-sub-menu").hide();
+    $("#veiligheid-sub-menu").hide();
+    $("#medewerkers-sub-menu").hide();
+    $("#formulieren-sub-menu").hide();
+    $("#chat-sub-menu").hide();
 });
 $("#organisatie-top-menu").click(function () {
-    $("#nieuws-sub-menu").hide("slow");
-    $("#organisatie-sub-menu").show("slow");
-    $("#veiligheid-sub-menu").hide("slow");
-    $("#medewerkers-sub-menu").hide("slow");
-    $("#formulieren-sub-menu").hide("slow");
-    $("#chat-sub-menu").hide("slow");
+    $("#nieuws-sub-menu").hide();
+    $("#organisatie-sub-menu").show();
+    $("#veiligheid-sub-menu").hide();
+    $("#medewerkers-sub-menu").hide();
+    $("#formulieren-sub-menu").hide();
+    $("#chat-sub-menu").hide();
 });
 $("#veiligheid-top-menu").click(function () {
-    $("#nieuws-sub-menu").hide("slow");
-    $("#organisatie-sub-menu").hide("slow");
-    $("#veiligheid-sub-menu").show("slow");
-    $("#medewerkers-sub-menu").hide("slow");
-    $("#formulieren-sub-menu").hide("slow");
-    $("#chat-sub-menu").hide("slow");
+    $("#nieuws-sub-menu").hide();
+    $("#organisatie-sub-menu").hide();
+    $("#veiligheid-sub-menu").show();
+    $("#medewerkers-sub-menu").hide();
+    $("#formulieren-sub-menu").hide();
+    $("#chat-sub-menu").hide();
 });
 $("#medewerkers-top-menu").click(function () {
-    $("#nieuws-sub-menu").hide("slow");
-    $("#organisatie-sub-menu").hide("slow");
-    $("#veiligheid-sub-menu").hide("slow");
-    $("#medewerkers-sub-menu").show("slow");
-    $("#formulieren-sub-menu").hide("slow");
-    $("#chat-sub-menu").hide("slow");
+    $("#nieuws-sub-menu").hide();
+    $("#organisatie-sub-menu").hide();
+    $("#veiligheid-sub-menu").hide();
+    $("#medewerkers-sub-menu").show();
+    $("#formulieren-sub-menu").hide();
+    $("#chat-sub-menu").hide();
 });
 $("#formulieren-top-menu").click(function () {
-    $("#nieuws-sub-menu").hide("slow");
-    $("#organisatie-sub-menu").hide("slow");
-    $("#veiligheid-sub-menu").hide("slow");
-    $("#medewerkers-sub-menu").hide("slow");
-    $("#formulieren-sub-menu").show("slow");
-    $("#chat-sub-menu").hide("slow");
+    $("#nieuws-sub-menu").hide();
+    $("#organisatie-sub-menu").hide();
+    $("#veiligheid-sub-menu").hide();
+    $("#medewerkers-sub-menu").hide();
+    $("#formulieren-sub-menu").show();
+    $("#chat-sub-menu").hide();
 });
 $("#chat-top-menu").click(function () {
-    $("#nieuws-sub-menu").hide("slow");
-    $("#organisatie-sub-menu").hide("slow");
-    $("#veiligheid-sub-menu").hide("slow");
-    $("#medewerkers-sub-menu").hide("slow");
-    $("#formulieren-sub-menu").hide("slow");
-    $("#chat-sub-menu").show("slow");
+    $("#nieuws-sub-menu").hide();
+    $("#organisatie-sub-menu").hide();
+    $("#veiligheid-sub-menu").hide();
+    $("#medewerkers-sub-menu").hide();
+    $("#formulieren-sub-menu").hide();
+    $("#chat-sub-menu").show();
 });
 function updateTime() {
     var now = new Date();

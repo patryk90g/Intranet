@@ -56,4 +56,13 @@
             $(window).bind("load", ScaleSlider);
             $(window).bind("resize", ScaleSlider);
             $(window).bind("orientationchange", ScaleSlider);
+            jQuery("#hide-bar").click(function ()
+            {
+                ScaleSlider();
+
+            });
+            jQuery("#show-bar").click(function ()
+            {
+                ScaleSlider();
+            });
         });
